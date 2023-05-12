@@ -1,0 +1,10 @@
+local player = game.Players.LocalPlayer
+local backpackTools = player.Backpack:GetChildren()
+for _, tool in ipairs(backpackTools) do
+    if tool:IsA("Tool") and tool.Name:lower():find("fire bomb") then
+        tool.Parent = player.Character
+        tool.start:FireServer()
+        tool:Activate()
+        tool.throw:FireServer()
+    end
+end
