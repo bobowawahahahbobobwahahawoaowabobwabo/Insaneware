@@ -1,6 +1,6 @@
 local disableChatMessages = false 
 local autoFaceAttackers = false 
-local parryDist = 13 
+local parryDist = 15
 local blacklist = {"someone you like", "someone else you like"} 
 
 local plr = game.Players.LocalPlayer
