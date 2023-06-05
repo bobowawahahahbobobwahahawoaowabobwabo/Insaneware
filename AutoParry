@@ -21,7 +21,7 @@ local animIds = {
     "rbxassetid://5435928313";
     "rbxassetid://5424166879";
 }
-
+print("AP loaded")
 local cmds = {}
 cmds.changeParryDist = function(x)
     local oldParryDist = parryDist
