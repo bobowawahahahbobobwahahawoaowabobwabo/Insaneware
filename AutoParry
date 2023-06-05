@@ -1,6 +1,6 @@
 local disableChatMessages = false 
 local autoFaceAttackers = false 
-local parryDist = 15
+local parryDist = 14
 local blacklist = {"someone you like", "someone else you like"} 
 
 local plr = game.Players.LocalPlayer
@@ -110,4 +110,17 @@ function main()
                                     local vector = char.HumanoidRootPart.Orientation
                                     for i = 1, 10 do
                                         char.HumanoidRootPart.CFrame = char:SetPrimaryPartCFrame(CFrame.new(char.HumanoidRootPart.Position, plrChar.HumanoidRootPart.Position))
-wait() end end wait(1) end end end end end end) end end wait(0.1) main()
+                                      wait()
+                                   end 
+                                 end
+                            wait(1) 
+                         end
+                      end
+                   end 
+                end 
+             end 
+          end)
+        end 
+     end
+wait(0.1)
+main()
