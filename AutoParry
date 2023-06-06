@@ -28,24 +28,24 @@ cmds.changeParryDist = function(x)
     parryDist = tonumber(x) or parryDist
     
     if tonumber(x) then
-        makeMessage("parryDist changed from ".. oldParryDist.. " to ".. parryDist, Color3.fromRGB(0, 255, 0))
+        makeMessage("parryDist changed from ".. oldParryDist.. " to ".. parryDist, Color3.fromRGB(255,255,255))
     else
-        makeMessage(x.. " must be a float or numeric value!", Color3.fromRGB(255, 0, 0))
+        makeMessage(x.. " must be a float or numeric value!", Color3.fromRGB(255,255,255))
 end end
 cmds.blacklistAdd = function(x)
     if game.Players:FindFirstChild(x) then
         table.insert(blacklist, tostring(x))
-        makeMessage("Player '".. x.. "' added to blacklist!", Color3.fromRGB(0, 255, 0))
+        makeMessage("Player '".. x.. "' added to blacklist!", Color3.fromRGB(255,255,255))
     else
-        makeMessage("Player '".. x "' not found!", Color3.fromRGB(255, 0, 0))
+        makeMessage("Player '".. x "' not found!", Color3.fromRGB(255,255,255))
 end end
 cmds.blacklistRemove = function(x)
     local index = table.find(blacklist, x)
     if index then
         table.remove(blacklist, index)
-        makeMessage("Player '".. x .. "' removed from blacklist!", Color3.fromRGB(0, 255, 0))
+        makeMessage("Player '".. x .. "' removed from blacklist!", Color3.fromRGB(255,255,255))
     else
-        makeMessage("Player '".. x .. "' not found in blacklist", Color3.fromRGB(255, 0, 0))
+        makeMessage("Player '".. x .. "' not found in blacklist", Color3.fromRGB(255,255,255))
 end end
 cmds.faceAttackers = function(x)
     if x == "true" then
@@ -53,7 +53,7 @@ cmds.faceAttackers = function(x)
     else
         autoFaceAttackers = false
     end
-    makeMessage("autoFaceAttackers set to ".. tostring(autoFaceAttackers), Color3.fromRGB(0, 255, 0))
+    makeMessage("autoFaceAttackers set to ".. tostring(autoFaceAttackers), Color3.fromRGB(255,255,255))
 end
 cmds.makeMessages = function(x)
     local bool
@@ -62,7 +62,7 @@ cmds.makeMessages = function(x)
     else
         bool = false
     end
-    makeMessage("disableChatMessages set to ".. tostring(disableChatMessages), Color3.fromRGB(0, 255, 0))
+    makeMessage("disableChatMessages set to ".. tostring(disableChatMessages), Color3.fromRGB(255,255,255))
     disableChatMessages = bool
 end
 plr.Chatted:Connect(function(msg)
@@ -75,7 +75,7 @@ plr.Chatted:Connect(function(msg)
 end)
 function makeMessage(message, color)
     if not disableChatMessages then
-        color = color or Color3.fromRGB(255, 255, 255)
+        color = color or Color3.fromRGB(255,255,255)
         game.StarterGui:SetCore("ChatMakeSystemMessage", {
             Text = message;
             Color = color;
@@ -93,7 +93,7 @@ function parry()
     if myParryEvent then
         myParryEvent:FireServer()
     end end
-makeMessage("Auto-Parry loaded!", Color3.fromRGB(124,185,232))
+makeMessage("Auto-Parry loaded!", Color3.fromRGB(255,255,255))
 function main()
     while true do
         pcall(function()
