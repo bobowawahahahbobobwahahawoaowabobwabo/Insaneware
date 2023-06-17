@@ -2,7 +2,8 @@ _G.sex = true
 
 
 while _G.sex == true do 
-wait(2)
+wait(15)
+print("Cleared")
 	for i,v in pairs(game.Workspace.Explosions:GetChildren()) do 
 					if v.Name == "BombProp" then 
 						for a,b in pairs(v:GetChildren()) do
@@ -12,6 +13,11 @@ wait(2)
 					if v.Name == "Molotovprop" then 
 						for a,b in pairs(v:GetChildren()) do
 							b:Destroy() 
-				end end end 
+				end end end
+	for i,v in pairs(game.Workspace.Explosions:GetChildren()) do 
+					if v.Name == "WaterFlask" then 
+						for a,b in pairs(v:GetChildren()) do
+							b:Destroy() 
+				end end end
 wait()
 end
