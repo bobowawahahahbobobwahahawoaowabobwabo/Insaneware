@@ -2,17 +2,17 @@ local tool = "C4"
 for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
 if v:IsA("Tool") and v.Name == tool then
 v.Parent = game:GetService("Players").LocalPlayer.Character
-end
+    end
 end
 wait(2.1)
 for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
 if v:IsA("Tool") and v.Name == tool then
 v.Parent = game:GetService("Players").LocalPlayer.Character
-end
+    end
 end
 wait(1.2)
 for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
 if v:IsA("Tool") and v.Name == tool then
 v.Parent = game:GetService("Players").LocalPlayer.Character
-end
+    end
 end
